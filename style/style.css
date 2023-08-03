@@ -182,3 +182,35 @@ min-height: 100vh;
   from {opacity: 0;}
   to {opacity: 1;}
 }
+
+.tabcontent {
+    width: 100%;
+    height: 100%;
+    margin-top: 50px;
+}
+.elements__wrapper {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.elements_element {
+    width: 100%;
+    padding: 10px 30px;
+    background-color: #f6f7f7;
+    border-radius: 9px;
+    margin-bottom: 20px;
+    color: #3e4953;
+}
+.elements_element_name {
+    font-weight: 600;
+    margin-bottom: 7px;
+}
+.elements_element_adress {
+    margin-bottom: 5px;
+    height: 30px;
+}
+
+.elements_element_number {
+}
