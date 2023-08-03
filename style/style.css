@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Mulish:wght@200;300;400&display=swap');
 
 * {
     padding: 0;
@@ -40,7 +41,7 @@
     -ms-text-size-adjust: 100%;
     -moz-text-size-adjust: 100%;
     -webkit-text-size-adjust: 100%;
-    font-family: "Noto Sans", sans-serif;
+    font-family: 'Mulish', sans-serif;
   }
   
   body.lock {
@@ -108,11 +109,16 @@
 .main__header__logo {
 }
 .main__header__name {
-    padding: 20px 0px;
+    padding: 20px 0px 50px 0px;
     color: rgba(87, 86, 86, 1);
     font-size: 27px;
+    font-weight: 500;
 }
+.container{
+width: 600px;
+min-height: 100vh; 
 
+}
 
 
 
@@ -132,6 +138,9 @@
     overflow: hidden;
     border: 1px solid #ccc;
     background-color: #f1f1f1;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
   }
   
   /* Style the buttons that are used to open the tab content */
@@ -143,6 +152,7 @@
     cursor: pointer;
     padding: 14px 16px;
     transition: 0.3s;
+    width: 49.9%;
   }
   
   /* Change background color of buttons on hover */
@@ -159,7 +169,7 @@
   .tabcontent {
     display: none;
     padding: 6px 12px;
-    border: 1px solid #ccc;
+
     border-top: none;
   }
 
