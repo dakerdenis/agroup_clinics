@@ -206,6 +206,7 @@ min-height: 100vh;
 .elements_element_name {
     font-weight: 600;
     margin-bottom: 7px;
+    font-size: 16px;
 }
 .elements_element_adress {
     margin-bottom: 5px;
