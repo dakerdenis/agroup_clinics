@@ -10,7 +10,7 @@ body {
   background: url('./style/imgs/123.jpg');
   background-size: cover;
   background-repeat: no-repeat;
-  
+  background-color: #080710;
 }
 form {
 
