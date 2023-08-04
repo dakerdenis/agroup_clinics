@@ -10,7 +10,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         if ($username == 'admin' && $password == '123') {
             session_start();
             $_SESSION["authenticated"] = 'true';
-            header('Location: ./admin.php');
+            header('Location: ./admin.php?page=data');
             exit();
         } else {
             header('Location: ./index.php');
