@@ -107,12 +107,17 @@
     align-items: center;
 }
 .main__header__logo {
+  width: 100px;
+  height: 100px;
+}
+.main__header__logo img {
+  width: 100%;
 }
 .main__header__name {
     padding: 20px 0px 50px 0px;
     color: rgba(87, 86, 86, 1);
     font-size: 27px;
-    font-weight: 500;
+    font-weight: 600;
 }
 .container{
 width: 600px;
@@ -227,6 +232,5 @@ min-height: 100vh;
   .container{
     width: 90%;
     margin: 0 auto;
-    background-color: red;
   }
 }
