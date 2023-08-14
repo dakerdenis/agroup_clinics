@@ -301,3 +301,51 @@
   height: 100%;
   display: block;
 }
+
+
+
+.add_container {
+  width: 750px;
+  margin: 0 auto;
+  margin-top: 50px;
+  background-color: #f1f1f1;
+  padding: 20px;
+  border-radius: 5px;
+}
+.add__element__form {
+  width: 100%;
+  height: 100%;
+}
+.add__element__container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.add__element__block {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+
+}
+.add__element__desc {
+  font-size: 16px;
+  margin-bottom: 7px;
+}
+.add__element__input {
+  height: 30px;
+  width: 100%;
+
+}
+.add__element__input input{
+  border-radius: 5px;
+  background-color: #fff;
+  border: 1px solid #3e495336;
+  width: 100%;
+  height: 100%;
+  padding: 5px;
+}
+.add__element__button {
+}
