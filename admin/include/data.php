@@ -69,30 +69,59 @@
 
 			<div id="aptek" class="tabcontent">
 				<div class="elements__wrapper">
-					<div class="elements_element">
-						<div class="elements_element_name">
-							<p>optika Koroglu</p>
-						</div>
-						<div class="elements_element_adress">
-							<p>Sumqayit, Azerbayjan, köz dönər küçesi, ev 228 ,m 1488 </p>
-						</div>
-						<div class="elements_element_number">
-							<p>+994 50 228 14 88</p>
-						</div>
-					</div>
+				<?php
+				$connection = mysqli_connect('localhost', 'root', '', 'clinics');
+				$query = "SELECT * FROM `aptek` ORDER BY `id`;";
 
-					<div class="elements_element">
-						<div class="elements_element_name">
-							<p>optika Koroglu</p>
+				$all_apteks = mysqli_query($connection, $query);
+
+
+				while ($row2 = mysqli_fetch_assoc($all_apteks)) {
+					$aptek_id = $row2['id'];
+					$aptek_name = $row2['name'];
+					$aptek_adress = $row2['adress'];
+					$aptek_phone = $row2['phone'];
+					$aptek_location1 = $row2['location_1'];
+					$aptek_location2 = $row2['location_2'];
+
+					?>
+
+						<div class="elements_element">
+							<div class="elements_element__container">
+								<div class="elements_element_name">
+									<p><?php echo $aptek_name ?></p>
+								</div>
+								<div class="elements_element_adress">
+									<p>
+									<?php echo $aptek_adress ?>
+									</p>
+								</div>
+								<div class="elements_element_number">
+									<p>
+									<?php echo $aptek_phone ?>
+									</p>
+								</div>
+							</div>
+							<div class="elements_element__location">
+								 <a target="_blank" href="https://www.google.com/maps?q=<?php echo $aptek_location1 ?>,<?php echo $aptek_location2 ?>">
+									<img src="../style/location.png" alt="">
+								</a>
+							</div>
+                            <div class="elements_element__location_delete">
+                                <a href="./include/delete.php?id=<?php echo $aptek_id ?>">
+                                    Delete
+                                </a>
+                            </div>
+                            <div class="elements_element__location_change">
+                                <a href="">
+                                    Settings
+                                </a>
+                            </div>
+
 						</div>
-						<div class="elements_element_adress">
-							<p>Sumqayit, Azerbayjan, köz dönər küçesi, ev 228 ,m 1488 </p>
-						</div>
-						<div class="elements_element_number">
-							<p>+994 50 228 14 88</p>
-						</div>
-					</div>
-				
+					<?php
+				}
+				?>
 
 
 				</div>

@@ -1,8 +1,25 @@
 <?php
-
+$connection = mysqli_connect('localhost', 'root', '', 'clinics');
 if(isset($_POST['create_aptek'])){
-    echo "created aptek suka";
+    $aptek_name = $_POST['aptek_name'];
+    $aptek_adress = $_POST['aptek_adress'];
+    $aptek_phone = $_POST['aptek_phone'];
 
+    $aptek_location1 = $_POST['aptek_location1'];
+    $aptek_location2 = $_POST['aptek_location2'];
+
+
+    $query = "INSERT INTO `aptek` (`name`, `adress`, `phone`, `location_1`, `location_2`) "; 
+    $query .= "VALUES ('{$aptek_name}', '{$aptek_adress}', '{$aptek_phone}', '{$aptek_location1}', '{$aptek_location2}') ";
+    
+    $create__aptek = mysqli_query($connection, $query); 
+
+    if(!$create__aptek){
+        die("QUERY FAILED ." . mysqli_error($connection));
+    }
+
+
+    header("Location: ../admin.php?page=data");
 }
 
 ?>
@@ -17,7 +34,7 @@ if(isset($_POST['create_aptek'])){
                    Aptek's name
                 </div>
                 <div class="add__element__input">
-                    <input type="text" placeholder="add Aptek's name">
+                    <input type="text" name="aptek_name" placeholder="add Aptek's name">
                 </div>
             </div>
             <div class="add__element__block">
@@ -25,7 +42,7 @@ if(isset($_POST['create_aptek'])){
                 Aptek's adress
                 </div>
                 <div class="add__element__input">
-                    <input type="text" placeholder="add Aptek's adress">
+                    <input type="text" name="aptek_adress" placeholder="add Aptek's adress">
                 </div>
             </div>
             <div class="add__element__block">
@@ -33,7 +50,7 @@ if(isset($_POST['create_aptek'])){
                 Aptek's phone
                 </div>
                 <div class="add__element__input">
-                    <input type="text" placeholder="add Aptek's phone">
+                    <input type="text" name="aptek_phone" placeholder="add Aptek's phone">
                 </div>
             </div>
 
@@ -42,7 +59,7 @@ if(isset($_POST['create_aptek'])){
                 Aptek's location X
                 </div>
                 <div class="add__element__input">
-                    <input type="text" placeholder="add Aptek's location X">
+                    <input type="text" name="aptek_location1" placeholder="add Aptek's location X">
                 </div>
             </div>
             <div class="add__element__block">
@@ -50,7 +67,7 @@ if(isset($_POST['create_aptek'])){
                 Aptek's Location Y
                 </div>
                 <div class="add__element__input">
-                    <input type="text" placeholder="add Aptek's Location Y">
+                    <input type="text" name="aptek_location2" placeholder="add Aptek's Location Y">
                 </div>
             </div>
 
