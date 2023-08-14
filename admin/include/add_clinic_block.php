@@ -1,7 +1,15 @@
 <?php
 
 if(isset($_POST['create_clinic'])){
-    echo "created clinic suka";
+    $clinic_name = $_POST['clinic_name'];
+    $clinic_adress = $_POST['clinic_adress'];
+    $clinic_phone = $_POST['clinic_phone'];
+
+    $clinic_location1 = $_POST['clinic_location1'];
+    $clinic_location2 = $_POST['clinic_location2'];
+
+
+    $query = ""
 
 }
 
@@ -25,7 +33,7 @@ if(isset($_POST['create_clinic'])){
                    Clinic's adress
                 </div>
                 <div class="add__element__input">
-                    <input type="text" placeholder="add clinic's adress">
+                    <input type="text" name="clinic_adress" placeholder="add clinic's adress">
                 </div>
             </div>
             <div class="add__element__block">
@@ -33,7 +41,7 @@ if(isset($_POST['create_clinic'])){
                    Clinic's phone
                 </div>
                 <div class="add__element__input">
-                    <input type="text" placeholder="add clinic's phone">
+                    <input type="text" name="clinic_phone" placeholder="add clinic's phone">
                 </div>
             </div>
 
@@ -42,7 +50,7 @@ if(isset($_POST['create_clinic'])){
                    Clinic's location X
                 </div>
                 <div class="add__element__input">
-                    <input type="text" placeholder="add clinic's location X">
+                    <input type="text" name="clinic_location1" placeholder="add clinic's location X">
                 </div>
             </div>
             <div class="add__element__block">
@@ -50,7 +58,7 @@ if(isset($_POST['create_clinic'])){
                    Clinic's Location Y
                 </div>
                 <div class="add__element__input">
-                    <input type="text" placeholder="add clinic's Location Y">
+                    <input type="text" name="clinic_location2" placeholder="add clinic's Location Y">
                 </div>
             </div>
 
