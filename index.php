@@ -35,50 +35,48 @@
 
 			<!-- Tab content -->
 			<div id="clinics" class="tabcontent">
-
-			<?php
-
-				$query = "SELECT * FROM `clinics`"
-			
-			?>
 				<div class="elements__wrapper">
-					<div class="elements_element">
-						<div class="elements_element_name">
-							<p>optika Koroglu</p>
-						</div>
-						<div class="elements_element_adress">
-							<p>Sumqayit, Azerbayjan, köz dönər küçesi, ev 228 ,m 1488 </p>
-						</div>
-						<div class="elements_element_number">
-							<p>+994 50 228 14 88</p>
-						</div>
-					</div>
 
-					<div class="elements_element">
-						<div class="elements_element_name">
-							<p>optika Koroglu</p>
-						</div>
-						<div class="elements_element_adress">
-							<p>Sumqayit, Azerbayjan, köz dönər küçesi, ev 228 ,m 1488 </p>
-						</div>
-						<div class="elements_element_number">
-							<p>+994 50 228 14 88</p>
-						</div>
-					</div>
+				<?php
+				$connection = mysqli_connect('localhost', 'root', '', 'clinics');
+				$query = "SELECT * FROM `clinics` ORDER BY `id`;";
 
-					<div class="elements_element">
-						<div class="elements_element_name">
-							<p>optika Koroglu</p>
-						</div>
-						<div class="elements_element_adress">
-							<p>Sumqayit, Azerbayjan, köz dönər küçesi, ev 228 ,m 1488 </p>
-						</div>
-						<div class="elements_element_number">
-							<p>+994 50 228 14 88</p>
-						</div>
-					</div>
+				$all_clinics = mysqli_query($connection, $query);
 
 
+				while ($row = mysqli_fetch_assoc($all_clinics)) {
+					$clinic_id = $row['id'];
+					$clinic_name = $row['name'];
+					$clinic_adress = $row['adress'];
+					$clinic_phone = $row['phone'];
+					$clinic_location1 = $row['location_1'];
+					$clinic_location2 = $row['location_2'];
+
+					?>
+
+						<div class="elements_element">
+							<div class="elements_element__container">
+								<div class="elements_element_name">
+									<p><?php echo $clinic_name ?></p>
+								</div>
+								<div class="elements_element_adress">
+									<p>
+									<?php echo $clinic_adress ?>
+									</p>
+								</div>
+								<div class="elements_element_number">
+									<p>
+									<?php echo $clinic_phone ?>
+									</p>
+								</div>
+							</div>
+							<div class="elements_element__location">
+								 <a target="_blank" href="https://www.google.com/maps?q=<?php echo $clinic_location1 ?>,<?php echo $clinic_location2 ?>">Map</a>
+							</div>
+						</div>
+					<?php
+				}
+				?>
 				</div>
 			</div>
 

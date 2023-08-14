@@ -207,6 +207,19 @@ min-height: 100vh;
     border-radius: 9px;
     margin-bottom: 20px;
     color: #3e4953;
+    display: flex;
+    justify-content: space-between;
+
+}
+.elements_element__container{
+  width: 85%;
+  background-color: red;
+  height: 100%;
+}
+.elements_element__location{
+  width: 13%;
+  background-color: green;
+  height: 100%;
 }
 .elements_element_name {
     font-weight: 600;
