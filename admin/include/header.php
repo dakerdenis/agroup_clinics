@@ -5,6 +5,12 @@
             <a class="header__Logo"  href="./admin.php?page=data">
                 <img src="../style/Logo.svg" alt="">
             </a>
+            <a class="header__add_element" href="#">
+                Добавить Клинику
+            </a>
+            <a class="header__add_element" href="#">
+                Добавить Аптеку
+            </a>
 
             <div class="header__username__exit">
                 <div class="header__username__image">

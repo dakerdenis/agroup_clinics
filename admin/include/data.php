@@ -49,6 +49,17 @@
 									<img src="../style/location.png" alt="">
 								</a>
 							</div>
+                            <div class="elements_element__location_delete">
+                                <a href="">
+                                    Delete
+                                </a>
+                            </div>
+                            <div class="elements_element__location_change">
+                                <a href="">
+                                    Settings
+                                </a>
+                            </div>
+
 						</div>
 					<?php
 				}
