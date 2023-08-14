@@ -50,7 +50,7 @@
 								</a>
 							</div>
                             <div class="elements_element__location_delete">
-                                <a href="">
+                                <a href="./include/delete.php?id=<?php echo $clinic_id ?>">
                                     Delete
                                 </a>
                             </div>
