@@ -35,6 +35,12 @@
 
 			<!-- Tab content -->
 			<div id="clinics" class="tabcontent">
+
+			<?php
+
+				$query = "SELECT * FROM `clinics`"
+			
+			?>
 				<div class="elements__wrapper">
 					<div class="elements_element">
 						<div class="elements_element_name">
