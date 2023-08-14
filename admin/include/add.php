@@ -1,15 +1,9 @@
 
 <?php
 if($_GET['type'] == 'clinic'){
-    
-} else {
-    
-} 
-
-?>
-
+    ?>
 <div class="add_container">
-    <from class="add__element__form">
+    <from class="add__element__form" action="./include/add_clinic.php" method="POST" >
         <div class="add__element__container">
             <div class="add__element__block">
                 <div class="add__element__desc">
@@ -54,10 +48,70 @@ if($_GET['type'] == 'clinic'){
             </div>
 
             <div class="add__element__button">
+            <input type="submit" name="create_clinic" value="Add Clinic">
+            </div>
+        </div>
+    </from>
+</div>
+    <?php
+} else {
+    ?>
+    <div class="add_container">
+    <from class="add__element__form">
+        <div class="add__element__container">
+            <div class="add__element__block">
+                <div class="add__element__desc">
+                   Aptek's name
+                </div>
+                <div class="add__element__input">
+                    <input type="text" placeholder="add Aptek's name">
+                </div>
+            </div>
+            <div class="add__element__block">
+                <div class="add__element__desc">
+                Aptek's adress
+                </div>
+                <div class="add__element__input">
+                    <input type="text" placeholder="add Aptek's adress">
+                </div>
+            </div>
+            <div class="add__element__block">
+                <div class="add__element__desc">
+                Aptek's phone
+                </div>
+                <div class="add__element__input">
+                    <input type="text" placeholder="add Aptek's phone">
+                </div>
+            </div>
+
+            <div class="add__element__block">
+                <div class="add__element__desc">
+                Aptek's location X
+                </div>
+                <div class="add__element__input">
+                    <input type="text" placeholder="add Aptek's location X">
+                </div>
+            </div>
+            <div class="add__element__block">
+                <div class="add__element__desc">
+                Aptek's Location Y
+                </div>
+                <div class="add__element__input">
+                    <input type="text" placeholder="add Aptek's Location Y">
+                </div>
+            </div>
+
+            <div class="add__element__button">
                     <button name="submit" type="submit">
-                        Add Clinic
+                        Add Aptek
                     </button>
             </div>
         </div>
     </from>
 </div>
+
+<?php 
+} 
+
+?>
+
