@@ -1,5 +1,5 @@
 <?php
-
+$connection = mysqli_connect('localhost', 'root', '', 'clinics');
 if(isset($_POST['create_clinic'])){
     $clinic_name = $_POST['clinic_name'];
     $clinic_adress = $_POST['clinic_adress'];
@@ -9,8 +9,17 @@ if(isset($_POST['create_clinic'])){
     $clinic_location2 = $_POST['clinic_location2'];
 
 
-    $query = ""
+    $query = "INSERT INTO `clinics` (`name`, `adress`, `phone`, `location_1`, `location_2`) "; 
+    $query .= "VALUES ('{$clinic_name}', '{$clinic_adress}', '{$clinic_phone}', '{$clinic_location1}', '{$clinic_location2}') ";
+    
+    $create__clinic = mysqli_query($connection, $query); 
 
+    if(!$create__clinic){
+        die("QUERY FAILED ." . mysqli_error($connection));
+    }
+
+
+    header("Location: ../admin.php?page=data");
 }
 
 ?>

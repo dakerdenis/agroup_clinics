@@ -4,6 +4,7 @@ if (empty($_SESSION["authenticated"]) || $_SESSION["authenticated"] != 'true') {
     header('Location: ./index.php');
     exit();
 }
+$connection = mysqli_connect('localhost', 'root', '', 'clinics');
 ?>
 
 
