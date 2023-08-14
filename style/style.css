@@ -213,13 +213,24 @@ min-height: 100vh;
 }
 .elements_element__container{
   width: 85%;
-  background-color: red;
+
   height: 100%;
 }
 .elements_element__location{
   width: 13%;
-  background-color: green;
+  display: flex;
+  justify-content: end;
 
+}
+.elements_element__location a{
+  display: flex;
+  height: 100%;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+}
+.elements_element__location img {
+  width: 30px;
 }
 .elements_element_name {
     font-weight: 600;

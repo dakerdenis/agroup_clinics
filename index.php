@@ -71,7 +71,9 @@
 								</div>
 							</div>
 							<div class="elements_element__location">
-								 <a target="_blank" href="https://www.google.com/maps?q=<?php echo $clinic_location1 ?>,<?php echo $clinic_location2 ?>">Map</a>
+								 <a target="_blank" href="https://www.google.com/maps?q=<?php echo $clinic_location1 ?>,<?php echo $clinic_location2 ?>">
+									<img src="./style/location.png" alt="">
+								</a>
 							</div>
 						</div>
 					<?php
