@@ -108,7 +108,7 @@
 								</a>
 							</div>
                             <div class="elements_element__location_delete">
-                                <a href="./include/delete.php?id=<?php echo $aptek_id ?>">
+                                <a href="./include/delete_aptek.php?id=<?php echo $aptek_id ?>">
                                     Delete
                                 </a>
                             </div>
