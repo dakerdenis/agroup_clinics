@@ -49,16 +49,17 @@
 									<img src="../style/location.png" alt="">
 								</a>
 							</div>
-                            <div class="elements_element__location_delete">
-                                <a href="./include/delete.php?id=<?php echo $clinic_id; ?>">
-                                    Delete
-                                </a>
-                            </div>
                             <div class="elements_element__location_change">
                                 <a href="./admin.php?page=edit&type=clinic&id=<?php echo $clinic_id; ?>">
-                                    Settings
+                                <i class="fa fa-gear"></i>
                                 </a>
                             </div>
+                            <div class="elements_element__location_delete">
+                                <a href="./include/delete.php?id=<?php echo $clinic_id; ?>">
+                                <i class="fa fa-trash-o"></i>
+                                </a>
+                            </div>
+
 
 						</div>
 					<?php
@@ -107,14 +108,14 @@
 									<img src="../style/location.png" alt="">
 								</a>
 							</div>
-                            <div class="elements_element__location_delete">
-                                <a href="./include/delete_aptek.php?id=<?php echo $aptek_id ?>">
-                                    Delete
+                            <div class="elements_element__location_change">
+                                <a href="./admin.php?page=edit&type=aptek&id=<?php echo $aptek_id; ?>">
+                                <i class="fa fa-gear"></i>
                                 </a>
                             </div>
-                            <div class="elements_element__location_change">
-                                <a href="">
-                                    Settings
+                            <div class="elements_element__location_delete">
+                                <a href="./include/delete_aptek.php?id=<?php echo $aptek_id; ?>">
+                                <i class="fa fa-trash-o"></i>
                                 </a>
                             </div>
 
