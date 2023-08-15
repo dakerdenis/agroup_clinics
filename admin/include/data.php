@@ -50,12 +50,12 @@
 								</a>
 							</div>
                             <div class="elements_element__location_delete">
-                                <a href="./include/delete.php?id=<?php echo $clinic_id ?>">
+                                <a href="./include/delete.php?id=<?php echo $clinic_id; ?>">
                                     Delete
                                 </a>
                             </div>
                             <div class="elements_element__location_change">
-                                <a href="">
+                                <a href="./admin.php?page=edit&type=clinic&id=<?php echo $clinic_id; ?>">
                                     Settings
                                 </a>
                             </div>
