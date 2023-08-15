@@ -1,6 +1,6 @@
 <?php
 if(isset($_POST['edit_item'])){
-    $connection = mysqli_connect('localhost', 'root', '', 'aptek');
+    $connection = mysqli_connect('localhost', 'root', '', 'clinics');
     $clinic_id = $_POST['clinic_id'];
     $clinic_name = $_POST['clinic_name'];
     $clinic_adress = $_POST['clinic_adress'];
