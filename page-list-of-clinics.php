@@ -9,12 +9,11 @@
 
     <?php get_header(); ?>
 
-
     <section class="main loc-main">
         <div class="main-cover loc-main-cover" style='background: url("<?php the_post_thumbnail_url() ?>");'></div>
     </section>
     <section class="list-detail loc-list-detail">
-        <div class="container container23">
+        <div class="container">
             <div class="container-list loc-container-list">
                 <div class="row" style="margin:0px;">
                     <div class="col-sm-12">
@@ -26,6 +25,7 @@
                     <ul class="nav nav-tabs loc-nav-tabs">
                         <li class="<?= $_GET['section'] == '1' ? 'active' : '' ?>"><a data-toggle="tab" href="#pharmacylist"><b><?php pll_e('List of pharmacies') ?></b></a></li>
                         <li class="<?= $_GET['section'] == '2' ? 'active' : '' ?>"><a data-toggle="tab" href="#clinicslist"><b><?php pll_e('List of clinics') ?></b></a></li>
+                        <li class="<?= $_GET['section'] == '3' ? 'active' : '' ?>"><a data-toggle="tab" href="#opticianlist"><b><?php pll_e('List of optics') ?></b></a></li>
                     </ul>
 
 
@@ -33,7 +33,14 @@
 
                     <div class="tab-content loc-tab-content">
                         <div id="pharmacylist" class="tab-pane fade in active">
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus accusantium quia ipsa officia iusto maxime recusandae! Magni in quos blanditiis sunt incidunt voluptatibus natus, voluptates totam reiciendis doloribus tenetur enim?
+                            <div class="panel-group loc-panel-group" id="accordion">
+                                
+
+                            </div>
+
+                            <div class="clinics-map loc-clinics-map">
+                                <div id="map" style="height:400px; width:100%"></div>
+                            </div>
                         </div>
 
 
@@ -41,12 +48,32 @@
 
 
                         <div id="clinicslist" class="tab-pane fade in">
-                                test
+
+                            <div class="panel-group loc-panel-group" id="accordion2">
+
+                            </div>
+
+                            <div class="clinics-map loc-clinics-map">
+                                <div id="map-clinics" style="height:400px; width:100%"></div>
+                            </div>
                         </div>
 
 
                         <!------------------------------------------------------------------------------------------------------------------------------------------->
->
+
+
+                        <div id="opticianlist" class="tab-pane fade in">
+                            
+                                        <div class="panel-group loc-panel-group" id="accordion3">
+
+                                            </div>
+
+                                            <div class="clinics-map loc-clinics-map">
+                                                <div id="map-optics" style="height:400px; width:100%"></div>
+                    
+                                            </div>
+                                        </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -56,12 +83,14 @@
     
     <?php get_footer(); ?>
     <style>
-        .container{
+        @media only screen and (max-width: 768px) {
+            .container{
             width: auto;
             visibility: hidden;
         }
         .container23{
             visibility:visible;
+            margin-top: 220px;
         }
         .footer{
             display: none;
@@ -75,6 +104,21 @@
             display: none;
             visibility: hidden;
         }
+        .container-list.loc-container-list{
+            width: 100%;
+            min-height: 100vh;
+        }
+        .loc-main{
+            display:none;
+            visibility: hidden;
+
+        }
+        .button-inner-container{
+            display:none;
+            visibility: hidden;
+        }
+        }
+
     </style>
 </body>
 
