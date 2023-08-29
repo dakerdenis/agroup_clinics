@@ -27,7 +27,7 @@ if(isset($_POST['edit_item'])){
        if(!$edit_item){
            die("QUERY FAILED ." . mysqli_error($connection) );
        }
-       sleep(3);
+       sleep(2);
        header("Location: ../admin.php?page=edit&type=clinic&id=$clinic_id&success=true");
 }
 ?>
