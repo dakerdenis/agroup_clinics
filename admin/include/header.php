@@ -3,7 +3,7 @@
 
         <div class="main__header">
             <a class="header__Logo"  href="./admin.php?page=data">
-                <img src="../style/Logo.svg" alt="">
+                <img src="./style/Logo.svg" alt="">
             </a>
             <a class="header__add_element" href="./admin.php?page=add&type=clinic">
                 Добавить Клинику

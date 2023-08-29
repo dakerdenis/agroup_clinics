@@ -10,15 +10,14 @@
         if (!$edited_item) {
             die("QUERY FAILED!!!" . mysqli_error($connection));
         }
-
+        
 
         while ($row  = mysqli_fetch_assoc($edited_item)) {
             $item_id = $row['id'];
             $name = $row['name'];
             $adress = $row['adress'];
             $phone = $row['phone'];
-            $location_1 = $row['location_1'];
-            $location_2 = $row['location_2'];
+            $location = $row['location'];
         }
 
     }
@@ -59,15 +58,7 @@
                 Change Clinic's location X
                 </div>
                 <div class="add__element__input">
-                    <input type="text" name="clinic_location1" placeholder="add clinic's location X" value="<?php echo $location_1; ?>">
-                </div>
-            </div>
-            <div class="add__element__block">
-                <div class="add__element__desc">
-                Change Clinic's Location Y
-                </div>
-                <div class="add__element__input">
-                    <input type="number" name="clinic_location2" placeholder="add clinic's Location Y" value="<?php echo $location_2; ?>">
+                    <input type="text" name="location" placeholder="add clinic's location " value="<?php echo $location; ?>">
                 </div>
             </div>
             <input type="text" name="clinic_id" style="opacity: 0;" value="<?php echo $item_id; ?>">

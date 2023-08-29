@@ -49,65 +49,32 @@
 					$clinic_phone = $row['phone'];
 					$clinic_location = $row['location'];
 
-
 					?>
-
-							<div class="elements_element">
-								<div class="elements_element__container">
-									<div class="elements_element_name">
-										<p><?php echo $clinic_name ?></p>
-									</div>
-									<div class="elements_element_adress">
-										<p>
-										<?php echo $clinic_adress ?>
-										</p>
-									</div>
-									<div class="elements_element_number">
-										<p>
-										<?php echo $clinic_phone ?>
-										</p>
-									</div>
-								</div>
-								<div class="elements_element__location">
-									 <a target="_blank" href="<?php echo $clinic_location ?>">
-										<img src="./style/location.png" alt="">
-									</a>
-								</div>
-							</div>
-						<?php
+				<div class="elements_element">
+					<div class="elements_element__container">
+						<div class="elements_element_name">
+							<p><?php echo $clinic_name ?></p>
+						</div>
+						<div class="elements_element_adress">
+							<p>
+							<?php echo $clinic_adress ?>
+							</p>
+						</div>
+						<div class="elements_element_number">
+							<p>
+							<?php echo $clinic_phone ?>
+							</p>
+						</div>
+					</div>
+					<div class="elements_element__location">
+						 <a target="_blank" href="<?php echo $clinic_location ?>">
+							<img src="./style/location.png" alt="">
+						</a>
+					</div>
+				</div>
+			<?php
 				}
 				?>
-				</div>
-			</div>
-
-			<div id="aptek" class="tabcontent">
-				<div class="elements__wrapper">
-					<div class="elements_element">
-						<div class="elements_element_name">
-							<p>optika Koroglu</p>
-						</div>
-						<div class="elements_element_adress">
-							<p>Sumqayit, Azerbayjan, köz dönər küçesi, ev 228 ,m 1488 </p>
-						</div>
-						<div class="elements_element_number">
-							<p>+994 50 228 14 88</p>
-						</div>
-					</div>
-
-					<div class="elements_element">
-						<div class="elements_element_name">
-							<p>optika Koroglu</p>
-						</div>
-						<div class="elements_element_adress">
-							<p>Sumqayit, Azerbayjan, köz dönər küçesi, ev 228 ,m 1488 </p>
-						</div>
-						<div class="elements_element_number">
-							<p>+994 50 228 14 88</p>
-						</div>
-					</div>
-				
-
-
 				</div>
 			</div>
 		</div>
