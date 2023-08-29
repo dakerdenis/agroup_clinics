@@ -5,6 +5,9 @@ if (empty($_SESSION["authenticated"]) || $_SESSION["authenticated"] != 'true') {
     exit();
 }
 $connection = mysqli_connect('localhost', 'root', '', 'clinics');
+if(!$connection){
+    
+}
 ?>
 
 
