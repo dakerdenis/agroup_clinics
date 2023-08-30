@@ -69,10 +69,10 @@
 			<div id="aptek" class="tabcontent">
 				<div class="elements__wrapper">
 				<?php
-				$connection = mysqli_connect('localhost', 'root', '', 'clinics');
-				$query = "SELECT * FROM `aptek` ORDER BY `id`;";
+				$connection2 = mysqli_connect('localhost', 'root', '', 'clinics');
+				$query2 = "SELECT * FROM `apteks` ORDER BY `id`;";
 
-				$all_apteks = mysqli_query($connection, $query);
+				$all_apteks = mysqli_query($connection2, $query2);
 
 
 				while ($row2 = mysqli_fetch_assoc($all_apteks)) {
@@ -80,8 +80,7 @@
 					$aptek_name = $row2['name'];
 					$aptek_adress = $row2['adress'];
 					$aptek_phone = $row2['phone'];
-					$aptek_location1 = $row2['location_1'];
-					$aptek_location2 = $row2['location_2'];
+					$aptek_location = $row2['location'];
 
 					?>
 
@@ -102,7 +101,7 @@
 								</div>
 							</div>
 							<div class="elements_element__location">
-								 <a target="_blank" href="https://www.google.com/maps?q=<?php echo $aptek_location1 ?>,<?php echo $aptek_location2 ?>">
+								 <a target="_blank" href="<?php echo $aptek_location?>">
 									<img src="../style/location.png" alt="">
 								</a>
 							</div>

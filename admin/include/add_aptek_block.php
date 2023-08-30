@@ -5,12 +5,12 @@ if(isset($_POST['create_aptek'])){
     $aptek_adress = $_POST['aptek_adress'];
     $aptek_phone = $_POST['aptek_phone'];
 
-    $aptek_location1 = $_POST['aptek_location1'];
-    $aptek_location2 = $_POST['aptek_location2'];
+    $aptek_location = $_POST['aptek_location1'];
 
 
-    $query = "INSERT INTO `aptek` (`name`, `adress`, `phone`, `location_1`, `location_2`) "; 
-    $query .= "VALUES ('{$aptek_name}', '{$aptek_adress}', '{$aptek_phone}', '{$aptek_location1}', '{$aptek_location2}') ";
+
+    $query = "INSERT INTO `apteks` (`name`, `adress`, `phone`, `location`) "; 
+    $query .= "VALUES ('{$aptek_name}', '{$aptek_adress}', '{$aptek_phone}', '{$aptek_location1}', '{$aptek_location}') ";
     
     $create__aptek = mysqli_query($connection, $query); 
 
@@ -56,20 +56,13 @@ if(isset($_POST['create_aptek'])){
 
             <div class="add__element__block">
                 <div class="add__element__desc">
-                Aptek's location X
+                Aptek's location 
                 </div>
                 <div class="add__element__input">
-                    <input type="text" name="aptek_location1" placeholder="add Aptek's location X">
+                    <input type="text" name="aptek_location" placeholder="add Aptek's location X">
                 </div>
             </div>
-            <div class="add__element__block">
-                <div class="add__element__desc">
-                Aptek's Location Y
-                </div>
-                <div class="add__element__input">
-                    <input type="text" name="aptek_location2" placeholder="add Aptek's Location Y">
-                </div>
-            </div>
+
 
             <div class="add__element__button">
                     <input type="submit" name="create_aptek" value="Add Aptek">
