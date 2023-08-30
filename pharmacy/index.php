@@ -28,9 +28,7 @@
 		<div class="container">
 			<!-- Tab links -->
 			<div class="tab">
-				<button class="tablinks" onclick="openCity(event, 'clinics')"  id="defaultOpen">Klinikalar</button>
-				<button class="tablinks" onclick="openCity(event, 'aptek')">Apteklər</button>
-			
+				<h1 class="tablinks" >Apteklər</h1>			
 			</div>
 
 			<!-- Tab content -->
@@ -39,7 +37,7 @@
 
 				<?php
 				$connection = mysqli_connect('localhost', 'root', '', 'clinics');
-				$query = "SELECT * FROM `clinics` ORDER BY `id`;";
+				$query = "SELECT * FROM `apteks` ORDER BY `id`;";
 
 				$all_clinics = mysqli_query($connection, $query);
 
@@ -49,8 +47,7 @@
 					$clinic_name = $row['name'];
 					$clinic_adress = $row['adress'];
 					$clinic_phone = $row['phone'];
-					$clinic_location1 = $row['location_1'];
-					$clinic_location2 = $row['location_2'];
+					$clinic_location1 = $row['location'];
 
 					?>
 
@@ -71,7 +68,7 @@
 								</div>
 							</div>
 							<div class="elements_element__location">
-								 <a target="_blank" href="https://www.google.com/maps?q=<?php echo $clinic_location1 ?>,<?php echo $clinic_location2 ?>">
+								 <a target="_blank" href="<?php echo $clinic_location1 ?>">
 									<img src="./style/location.png" alt="">
 								</a>
 							</div>
@@ -79,37 +76,6 @@
 					<?php
 				}
 				?>
-				</div>
-			</div>
-
-			<div id="aptek" class="tabcontent">
-				<div class="elements__wrapper">
-					<div class="elements_element">
-						<div class="elements_element_name">
-							<p>optika Koroglu</p>
-						</div>
-						<div class="elements_element_adress">
-							<p>Sumqayit, Azerbayjan, köz dönər küçesi, ev 228 ,m 1488 </p>
-						</div>
-						<div class="elements_element_number">
-							<p>+994 50 228 14 88</p>
-						</div>
-					</div>
-
-					<div class="elements_element">
-						<div class="elements_element_name">
-							<p>optika Koroglu</p>
-						</div>
-						<div class="elements_element_adress">
-							<p>Sumqayit, Azerbayjan, köz dönər küçesi, ev 228 ,m 1488 </p>
-						</div>
-						<div class="elements_element_number">
-							<p>+994 50 228 14 88</p>
-						</div>
-					</div>
-				
-
-
 				</div>
 			</div>
 		</div>

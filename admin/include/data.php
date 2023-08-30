@@ -69,10 +69,9 @@
 			<div id="aptek" class="tabcontent">
 				<div class="elements__wrapper">
 				<?php
-				$connection2 = mysqli_connect('localhost', 'root', '', 'clinics');
 				$query2 = "SELECT * FROM `apteks` ORDER BY `id`;";
 
-				$all_apteks = mysqli_query($connection2, $query2);
+				$all_apteks = mysqli_query($connection, $query2);
 
 
 				while ($row2 = mysqli_fetch_assoc($all_apteks)) {
@@ -102,7 +101,7 @@
 							</div>
 							<div class="elements_element__location">
 								 <a target="_blank" href="<?php echo $aptek_location?>">
-									<img src="../style/location.png" alt="">
+									<img src="./style/location.png" alt="">
 								</a>
 							</div>
                             <div class="elements_element__location_change">

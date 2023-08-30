@@ -5,18 +5,18 @@ if(isset($_POST['edit_item'])){
     $clinic_name = $_POST['clinic_name'];
     $clinic_adress = $_POST['clinic_adress'];
     $clinic_phone = $_POST['clinic_phone'];
-    $clinic_location1 = $_POST['clinic_location1'];
-    $clinic_location2 = $_POST['clinic_location2'];
+    $clinic_location1 = $_POST['clinic_location'];
 
 
-       $query = "UPDATE `aptek` SET ";
+
+       $query = "UPDATE `apteks` SET ";
        $query .= "`name`='{$clinic_name}', ";
    
        $query .= "`adress`='{$clinic_adress}', ";
        $query .= "`phone`='{$clinic_phone}', ";
    
-       $query .= "`location_1`='{$clinic_location1}', ";
-       $query .= "`location_2`='{$clinic_location2}' ";
+       $query .= "`location`='{$clinic_location1}' ";
+
 
    
        $query .= "WHERE `id` = $clinic_id ";

@@ -3,7 +3,7 @@
         $aptek = $_GET['id'];
 
         $connection = mysqli_connect('localhost', 'root', '', 'clinics');
-        $query = "SELECT * FROM `aptek`  WHERE `id` = $aptek;";
+        $query = "SELECT * FROM `apteks`  WHERE `id` = $aptek;";
         $edited_item = mysqli_query($connection, $query);
 
 
@@ -17,8 +17,7 @@
             $name = $row['name'];
             $adress = $row['adress'];
             $phone = $row['phone'];
-            $location_1 = $row['location_1'];
-            $location_2 = $row['location_2'];
+            $location = $row['location'];
         }
 
     }
@@ -34,7 +33,7 @@
                    Change Aptek's name
                 </div>
                 <div class="add__element__input">
-                    <input type="text" name="clinic_name" placeholder="add clinic's name" value="<?php echo $name; ?>">
+                    <input type="text" name="clinic_name" placeholder="edit aptek's  name" value="<?php echo $name; ?>">
                 </div>
             </div>
             <div class="add__element__block">
@@ -42,7 +41,7 @@
                 Change Aptek's adress
                 </div>
                 <div class="add__element__input">
-                    <input type="text" name="clinic_adress" placeholder="add clinic's adress" value="<?php echo $adress; ?>">
+                    <input type="text" name="clinic_adress" placeholder="edit aptek's  adress" value="<?php echo $adress; ?>">
                 </div>
             </div>
             <div class="add__element__block">
@@ -50,7 +49,7 @@
                 Change Aptek's phone
                 </div>
                 <div class="add__element__input">
-                    <input type="text" name="clinic_phone" placeholder="add clinic's phone" value="<?php echo $phone; ?>">
+                    <input type="text" name="clinic_phone" placeholder="edit aptek's  phone" value="<?php echo $phone; ?>">
                 </div>
             </div>
 
@@ -59,15 +58,7 @@
                 Change Aptek's location X
                 </div>
                 <div class="add__element__input">
-                    <input type="text" name="clinic_location1" placeholder="add clinic's location X" value="<?php echo $location_1; ?>">
-                </div>
-            </div>
-            <div class="add__element__block">
-                <div class="add__element__desc">
-                Change Aptek's Location Y
-                </div>
-                <div class="add__element__input">
-                    <input type="number" name="clinic_location2" placeholder="add clinic's Location Y" value="<?php echo $location_2; ?>">
+                    <input type="text" name="clinic_location" placeholder="edit aptek's location" value="<?php echo $location; ?>">
                 </div>
             </div>
             <input type="text" name="clinic_id" style="opacity: 0;" value="<?php echo $item_id; ?>">

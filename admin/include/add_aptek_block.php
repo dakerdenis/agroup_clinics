@@ -5,12 +5,12 @@ if(isset($_POST['create_aptek'])){
     $aptek_adress = $_POST['aptek_adress'];
     $aptek_phone = $_POST['aptek_phone'];
 
-    $aptek_location = $_POST['aptek_location1'];
+    $aptek_location = $_POST['aptek_location'];
 
 
 
     $query = "INSERT INTO `apteks` (`name`, `adress`, `phone`, `location`) "; 
-    $query .= "VALUES ('{$aptek_name}', '{$aptek_adress}', '{$aptek_phone}', '{$aptek_location1}', '{$aptek_location}') ";
+    $query .= "VALUES ('{$aptek_name}', '{$aptek_adress}', '{$aptek_phone}', '{$aptek_location}') ";
     
     $create__aptek = mysqli_query($connection, $query); 
 
@@ -59,7 +59,7 @@ if(isset($_POST['create_aptek'])){
                 Aptek's location 
                 </div>
                 <div class="add__element__input">
-                    <input type="text" name="aptek_location" placeholder="add Aptek's location X">
+                    <input type="text" name="aptek_location" placeholder="add Aptek's location">
                 </div>
             </div>
 
