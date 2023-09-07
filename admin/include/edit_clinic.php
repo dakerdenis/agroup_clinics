@@ -16,7 +16,7 @@ if(isset($_POST['edit_item'])){
        $query .= "`adress`='{$clinic_adress}', ";
        $query .= "`phone`='{$clinic_phone}', ";
 
-       $query .= "`location_1`='{$location_1}' ";
+       $query .= "`location_1`='{$location_1}', ";
        $query .= "`location_2`='{$location_2}' ";
 
    

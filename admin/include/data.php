@@ -23,7 +23,8 @@
 					$clinic_name = $row['name'];
 					$clinic_adress = $row['adress'];
 					$clinic_phone = $row['phone'];
-					$location = $row['location'];
+					$location_1 = $row['location_1'];
+					$location_2 = $row['location_2'];
 					?>
 
 						<div class="elements_element">
@@ -43,7 +44,7 @@
 								</div>
 							</div>
 							<div class="elements_element__location">
-								 <a target="_blank" href="<?php echo $location ?>">
+							<a target="_blank" href="<?php echo "https://www.google.com/maps?q=".$location_1.",".$location_2."" ?>">
 									<img src="./style/location.png" alt="">
 								</a>
 							</div>
