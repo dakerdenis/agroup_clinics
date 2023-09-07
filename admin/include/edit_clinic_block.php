@@ -17,7 +17,8 @@
             $name = $row['name'];
             $adress = $row['adress'];
             $phone = $row['phone'];
-            $location = $row['location'];
+            $location_1 = $row['location_1'];
+            $location_2 = $row['location_2'];
         }
 
     }
@@ -58,7 +59,15 @@
                 Change Clinic's location X
                 </div>
                 <div class="add__element__input">
-                    <input type="text" name="location" placeholder="add clinic's location " value="<?php echo $location; ?>">
+                    <input type="text" name="location_1" placeholder="add clinic's location X" value="<?php echo $location_1; ?>">
+                </div>
+            </div>
+            <div class="add__element__block">
+                <div class="add__element__desc">
+                Change Clinic's location Y
+                </div>
+                <div class="add__element__input">
+                    <input type="text" name="location_2" placeholder="add clinic's location Y" value="<?php echo $location_2; ?>">
                 </div>
             </div>
             <input type="text" name="clinic_id" style="opacity: 0;" value="<?php echo $item_id; ?>">

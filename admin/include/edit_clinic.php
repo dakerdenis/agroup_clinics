@@ -5,7 +5,8 @@ if(isset($_POST['edit_item'])){
     $clinic_name = $_POST['clinic_name'];
     $clinic_adress = $_POST['clinic_adress'];
     $clinic_phone = $_POST['clinic_phone'];
-    $location = $_POST['location'];
+    $location_1 = $_POST['location_1'];
+    $location_2 = $_POST['location_2'];
 
 
 
@@ -15,7 +16,8 @@ if(isset($_POST['edit_item'])){
        $query .= "`adress`='{$clinic_adress}', ";
        $query .= "`phone`='{$clinic_phone}', ";
 
-       $query .= "`location`='{$location}' ";
+       $query .= "`location_1`='{$location_1}' ";
+       $query .= "`location_2`='{$location_2}' ";
 
    
        $query .= "WHERE `id` = $clinic_id ";

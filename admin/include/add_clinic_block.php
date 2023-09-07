@@ -9,8 +9,8 @@ if(isset($_POST['create_clinic'])){
     $clinic_location2 = $_POST['clinic_location2'];
 
 
-    $query = "INSERT INTO `clinics` (`name`, `adress`, `phone`, `location`) "; 
-    $query .= "VALUES ('{$clinic_name}', '{$clinic_adress}', '{$clinic_phone}', '{$location}') ";
+    $query = "INSERT INTO `clinics` (`name`, `adress`, `phone`, `location_1` ,`location_2`) "; 
+    $query .= "VALUES ('{$clinic_name}', '{$clinic_adress}', '{$clinic_phone}', '{$clinic_location1}','{$clinic_location2}'); ";
     
     $create__clinic = mysqli_query($connection, $query); 
 
@@ -56,10 +56,18 @@ if(isset($_POST['create_clinic'])){
 
             <div class="add__element__block">
                 <div class="add__element__desc">
-                   Clinic's location 
+                   Clinic's location X
                 </div>
                 <div class="add__element__input">
-                    <input type="text" name="location" placeholder="add clinic's location">
+                    <input type="text" name="clinic_location1" placeholder="add clinic's location X">
+                </div>
+            </div>
+            <div class="add__element__block">
+                <div class="add__element__desc">
+                   Clinic's location Y
+                </div>
+                <div class="add__element__input">
+                    <input type="text" name="clinic_location2" placeholder="add clinic's location Y">
                 </div>
             </div>
             <div class="add__element__button">
