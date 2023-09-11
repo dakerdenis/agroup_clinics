@@ -10,6 +10,19 @@
 </head>
 
 <body>
+<style>
+		.red_color{
+			color: #BE2A2A;
+			font-weight: 600;
+			border-left: 1px solid #3e4953;
+		}
+		.link a{
+			display: block;
+			width: 100%;
+			height: 100%;
+			color: #3e4953;
+		}
+	</style>
 
 
 	<div class="main__wrapper">
@@ -28,7 +41,12 @@
 		<div class="container">
 			<!-- Tab links -->
 			<div class="tab">
-				<h1 class="tablinks" >Apteklər</h1>			
+			<h1 class="tablinks link" >
+				<a href="../clinics/index.php">Klinikalar</a>
+			</h1>			
+				<h1 class="tablinks  red_color" >
+					Apteklər
+				</h1>		
 			</div>
 
 			<!-- Tab content -->
@@ -62,7 +80,7 @@
 									</p>
 								</div>
 								<div class="elements_element_number">
-									<p>
+									<p id="phoneNUmber">
 									<?php echo $clinic_phone ?>
 									</p>
 								</div>
@@ -86,28 +104,28 @@
 
 
 	<script>
-		function openCity(evt, cityName) {
-			// Declare all variables
-			var i, tabcontent, tablinks;
+		const paragraphs = document.querySelectorAll('#phoneNUmber');
 
-			// Get all elements with class="tabcontent" and hide them
-			tabcontent = document.getElementsByClassName("tabcontent");
-			for (i = 0; i < tabcontent.length; i++) {
-				tabcontent[i].style.display = "none";
-			}
+paragraphs.forEach(paragraph => {
+	if(paragraph.textContent != ""){
+// Get the text content of the <p> element
+const phoneNumber = paragraph.textContent.trim();
+	// Split the phone number into two parts
+	const parts = phoneNumber.split(' ');
+	const countryCode = parts.shift(); // Remove the first part (country code)
 
-			// Get all elements with class="tablinks" and remove the class "active"
-			tablinks = document.getElementsByClassName("tablinks");
-			for (i = 0; i < tablinks.length; i++) {
-				tablinks[i].className = tablinks[i].className.replace(" active", "");
-			}
+	// Format the country code with parentheses
+	const formattedCountryCode = `(+${countryCode})`;
 
-			// Show the current tab, and add an "active" class to the button that opened the tab
-			document.getElementById(cityName).style.display = "block";
-			evt.currentTarget.className += " active";
-		}
+	// Join the remaining parts back together
+	const restOfNumber = parts.join(' ');
 
-		document.getElementById("defaultOpen").click();
+	// Combine the formatted country code and the rest of the number
+	const formattedPhoneNumber = `${formattedCountryCode} ${restOfNumber}`;
+	paragraph.textContent = formattedPhoneNumber;};
+});
+
+
 	</script>
 </body>
 

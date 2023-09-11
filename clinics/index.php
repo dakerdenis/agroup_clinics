@@ -10,6 +10,26 @@
 </head>
 
 <body>
+	<style>
+		.red_color{
+			color: #BE2A2A;
+			font-weight: 600;
+			border-right: 1px solid #3e4953;
+		}
+		.link a{
+			display: block;
+			width: 100%;
+			height: 100%;
+			color: #3e4953;
+		}
+		.elements_element_name{
+			font-weight: 600;
+	margin-bottom: 7px;
+	font-size: 16px;
+	color: #BE2A2A;
+	line-height: 22px;
+		}
+	</style>
 
 
 	<div class="main__wrapper">
@@ -28,7 +48,10 @@
 		<div class="container">
 			<!-- Tab links -->
 			<div class="tab">
-				<h1 class="tablinks" >Klinikalar</h1>			
+				<h1 class="tablinks red_color" >Klinikalar</h1>			
+				<h1 class="tablinks link" >
+					<a href="../pharmacy/index.php">Apteklər</a>
+				</h1>		
 			</div>
 
 			<!-- Tab content -->
@@ -51,29 +74,29 @@
 					$clinic_location2 = $row['location_2'];
 
 					?>
-				<div class="elements_element">
-					<div class="elements_element__container">
-						<div class="elements_element_name">
-							<p><?php echo $clinic_name ?></p>
+					<div class="elements_element">
+						<div class="elements_element__container">
+							<div class="elements_element_name">
+								<p><?php echo $clinic_name ?></p>
+							</div>
+							<div class="elements_element_adress">
+								<p>
+								<?php echo $clinic_adress ?>
+								</p>
+							</div>
+							<div class="elements_element_number">
+								<p id="phoneNUmber">
+								<?php echo $clinic_phone ?>
+								</p>
+							</div>
 						</div>
-						<div class="elements_element_adress">
-							<p>
-							<?php echo $clinic_adress ?>
-							</p>
-						</div>
-						<div class="elements_element_number">
-							<p>
-							<?php echo $clinic_phone ?>
-							</p>
+						<div class="elements_element__location">
+						<a target="_blank" href="<?php echo "https://www.google.com/maps?q=" . $clinic_location1 . "," . $clinic_location2 . "" ?>">
+								<img src="./style/location.png" alt="">
+							</a>
 						</div>
 					</div>
-					<div class="elements_element__location">
-					<a target="_blank" href="<?php echo "https://www.google.com/maps?q=".$clinic_location1.",".$clinic_location2."" ?>">
-							<img src="./style/location.png" alt="">
-						</a>
-					</div>
-				</div>
-			<?php
+				<?php
 				}
 				?>
 				</div>
@@ -86,6 +109,28 @@
 
 
 	<script>
+		const paragraphs = document.querySelectorAll('#phoneNUmber');
+
+		paragraphs.forEach(paragraph => {
+			if(paragraph.textContent != ""){
+	// Get the text content of the <p> element
+	const phoneNumber = paragraph.textContent.trim();
+			// Split the phone number into two parts
+			const parts = phoneNumber.split(' ');
+			const countryCode = parts.shift(); // Remove the first part (country code)
+
+			// Format the country code with parentheses
+			const formattedCountryCode = `(+${countryCode})`;
+
+			// Join the remaining parts back together
+			const restOfNumber = parts.join(' ');
+
+			// Combine the formatted country code and the rest of the number
+			const formattedPhoneNumber = `${formattedCountryCode} ${restOfNumber}`;
+			paragraph.textContent = formattedPhoneNumber;};
+	});
+
+
 
 	</script>
 </body>
