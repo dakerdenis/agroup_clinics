@@ -42,7 +42,7 @@
 			<!-- Tab links -->
 			<div class="tab">
 			<h1 class="tablinks link" >
-				<a href="../stomatologiya/index.php">Optikalar</a>
+				<a href="../optiks/index.php">Optikalar</a>
 			</h1>			
 				<h1 class="tablinks  red_color" >
 				Stomatologiyalar

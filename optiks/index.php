@@ -14,7 +14,7 @@
 		.red_color{
 			color: #BE2A2A;
 			font-weight: 600;
-			border-left: 1px solid #3e4953;
+			border-right: 1px solid #3e4953;
 		}
 		.link a{
 			display: block;
@@ -41,12 +41,15 @@
 		<div class="container">
 			<!-- Tab links -->
 			<div class="tab">
-			<h1 class="tablinks link" >
-				<a href="../stomatologiya/index.php">Stomatologiyalar</a>
-			</h1>			
+		
 				<h1 class="tablinks  red_color" >
 				Optikalar
-				</h1>		
+				</h1>	
+				<h1 class="tablinks link" >
+				<a href="../stomatologiya/index.php">
+				Stomatologiyalar
+				</a>
+			</h1>		
 			</div>
 
 			<!-- Tab content -->
