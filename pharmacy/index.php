@@ -113,9 +113,10 @@ const phoneNumber = paragraph.textContent.trim();
 	// Split the phone number into two parts
 	const parts = phoneNumber.split(' ');
 	const countryCode = parts.shift(); // Remove the first part (country code)
-
+	
+	const numberCode = parts.shift();
 	// Format the country code with parentheses
-	const formattedCountryCode = `(+${countryCode})`;
+	const formattedCountryCode = `(+${countryCode} ${numberCode})`;
 
 	// Join the remaining parts back together
 	const restOfNumber = parts.join(' ');
@@ -124,7 +125,6 @@ const phoneNumber = paragraph.textContent.trim();
 	const formattedPhoneNumber = `${formattedCountryCode} ${restOfNumber}`;
 	paragraph.textContent = formattedPhoneNumber;};
 });
-
 
 	</script>
 </body>
