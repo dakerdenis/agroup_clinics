@@ -4,7 +4,8 @@
 			<div class="tab">
 				<button class="tablinks" onclick="openCity(event, 'clinics')"  id="defaultOpen">Klinikalar</button>
 				<button class="tablinks" onclick="openCity(event, 'aptek')">Apteklər</button>
-			
+				<button class="tablinks" onclick="openCity(event, 'stomatologiya')">Stomatologiya</button>
+				<button class="tablinks" onclick="openCity(event, 'optiks')">Optiks</button>			
 			</div>
 
 			<!-- Tab content -->

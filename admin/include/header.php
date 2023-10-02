@@ -12,6 +12,13 @@
                 Добавить Аптеку
             </a>
 
+            <a class="header__add_element" href="./admin.php?page=add&type=stomatologiya">
+                Добавить Стоматологию
+            </a>
+            <a class="header__add_element" href="./admin.php?page=add&type=optiks">
+                Добавить Оптику
+            </a>
+
             <div class="header__username__exit">
                 <div class="header__username__image">
                     <img src="./style/account.png" alt="">
