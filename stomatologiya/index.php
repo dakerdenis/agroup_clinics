@@ -55,7 +55,7 @@
 
 				<?php
 				$connection = mysqli_connect('localhost', 'root', '', 'clinics');
-				$query = "SELECT * FROM `apteks` ORDER BY `id`;";
+				$query = "SELECT * FROM `stomatologiya` ORDER BY `id`;";
 
 				$all_clinics = mysqli_query($connection, $query);
 

@@ -125,6 +125,69 @@
 
 				</div>
 			</div>
+
+
+			<div id="stomatologiya" class="tabcontent">
+			<div class="elements__wrapper">
+				<?php
+				$query3 = "SELECT * FROM `apteks` ORDER BY `id`;";
+
+				$all_stomatologiya = mysqli_query($connection, $query2);
+
+
+				while ($row3 = mysqli_fetch_assoc($all_stomatologiya)) {
+					$stomatologiya_id = $row2['id'];
+					$stomatologiya_name = $row2['name'];
+					$stomatologiya_adress = $row2['adress'];
+					$stomatologiya_phone = $row2['phone'];
+					$stomatologiya_location = $row2['location'];
+
+					?>
+
+						<div class="elements_element">
+							<div class="elements_element__container">
+								<div class="elements_element_name">
+									<p><?php echo $stomatologiya_name ?></p>
+								</div>
+								<div class="elements_element_adress">
+									<p>
+									<?php echo $stomatologiya_adress ?>
+									</p>
+								</div>
+								<div class="elements_element_number">
+									<p>
+									<?php echo $stomatologiya_phone ?>
+									</p>
+								</div>
+							</div>
+							<div class="elements_element__location">
+								 <a target="_blank" href="<?php echo $stomatologiya_location?>">
+									<img src="./style/location.png" alt="">
+								</a>
+							</div>
+                            <div class="elements_element__location_change">
+                                <a href="./admin.php?page=edit&type=aptek&id=<?php echo $stomatologiya_id; ?>">
+                                <i class="fa fa-gear"></i>
+                                </a>
+                            </div>
+                            <div class="elements_element__location_delete">
+                                <a href="./include/delete_aptek.php?id=<?php echo $stomatologiya_id; ?>">
+                                <i class="fa fa-trash-o"></i>
+                                </a>
+                            </div>
+
+						</div>
+					<?php
+				}
+				?>
+
+
+				</div>
+			</div>
+
+			<div id="optiks" class="tabcontent">
+			optiks
+			</div>
 		</div>
 
 </div>
